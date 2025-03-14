@@ -10,15 +10,15 @@ export default function SocialIcons() {
     // function 
 
     return (
-        <div className={"socialLinks flex gap-5 items-center"}>
-            <a href="https://www.linkedin.com/in/jack-leslie-/" target="_blank" onMouseEnter={""}>
-                <FontAwesomeIcon icon={faLinkedin} size="2x" color="#333" />
+        <div className={"socialLinks flex gap-5 items-center justify-center"}>
+            <a href="https://www.linkedin.com/in/jack-leslie-/" target="_blank">
+                <FontAwesomeIcon icon={faLinkedin} className={"text-3xl hover:text-gray-600"}/>
             </a>
-            <a href="https://github.com/jlesliegit" target="_blank" className={"gitHub"}>
-                <FontAwesomeIcon icon={faGithub} size="2x" color="#333" />
+            <a href="https://github.com/jlesliegit" target="_blank" >
+                <FontAwesomeIcon icon={faGithub} className={"text-3xl hover:text-gray-600"}/>
             </a>
-            <a href="mailto:jackandrewleslie@gmail.com" className={"email"}>
-                <FontAwesomeIcon icon={faEnvelope} size="2x" color="#333" />
+            <a href="mailto:jackandrewleslie@gmail.com">
+                <FontAwesomeIcon icon={faEnvelope} className={"text-3xl hover:text-gray-600"}/>
             </a>
         </div>
     );
