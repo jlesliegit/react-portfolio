@@ -1,6 +1,8 @@
 import Title from "../atoms/Title.jsx";
 import Tagline from "../atoms/Tagline.jsx";
 import SocialLinks from "../atoms/SocialLinks.jsx";
+import {NavLink} from "react-router-dom";
+import NavigationLinks from "../atoms/NavigationLinks.jsx";
 
 export default function Hero() {
     return(
@@ -9,6 +11,7 @@ export default function Hero() {
                 <Title />
                 <Tagline />
                 <SocialLinks />
+                <NavigationLinks />
             </div>
         </div>
     )

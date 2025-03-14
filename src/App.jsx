@@ -1,11 +1,13 @@
 import './App.css'
-import {BrowserRouter} from "react-router-dom";
+import {BrowserRouter, Route, Routes} from "react-router-dom";
 import Hero from "./components/Hero.jsx";
 
 export default function App() {
   return (
       <BrowserRouter>
-          <Hero />
+          <Routes>
+              <Route path={"/"} element={<Hero/>} />
+          </Routes>
       </BrowserRouter>
   )
 }
