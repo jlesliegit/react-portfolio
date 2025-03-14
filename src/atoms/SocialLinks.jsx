@@ -5,10 +5,6 @@ import {useState} from "react";
 
 export default function SocialIcons() {
 
-    const [hover, setHover] = useState('');
-
-    // function 
-
     return (
         <div className={"socialLinks flex gap-5 items-center justify-center"}>
             <a href="https://www.linkedin.com/in/jack-leslie-/" target="_blank">
