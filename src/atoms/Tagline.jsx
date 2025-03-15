@@ -3,6 +3,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 export default function() {
     return(
         <TypeAnimation
+            className={'font-light'}
             sequence={[
                 'Lifelong learner',
                 1000,
