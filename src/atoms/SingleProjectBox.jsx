@@ -1,14 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { useParams } from "react-router-dom";
 
-export default function SingleProjectBox({ title, image, description, link }) {
+export default function SingleProjectBox({ id, title, image, description}) {
+
     return (
-        <div>
-            <img src={image} alt={title} />
-            <p>{title}</p>
-            <p>{description}</p>
-            <a href={link} target="_blank">
-                <FontAwesomeIcon icon={faGithub} className="text-3xl hover:text-gray-600"/>
+        <div className="flex flex-col justify-center items-center opacity-50 cursor-pointer rounded-lg">
+            <a href={`/projects/${id}`}>
+                <img src={image} alt={title} className="w-60 h-60 object-cover" />
+                <p>{title}</p>
+                <p>{description}</p>
             </a>
         </div>
     );

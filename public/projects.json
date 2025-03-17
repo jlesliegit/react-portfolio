@@ -1,16 +1,34 @@
 {
   "projects": [
     {
+      "id" : 1,
       "title": "Book Swap Library",
       "description": "As a team of 6 we collaborated using agile methodologies to work with an already existing API to implement a number of features including displaying books, adding new book entries, adding reviews for books and the ability to claim and return books.",
-      "image": "src/assets/bookswap.png",
+      "image": "/assets/bookswap.png",
       "alt": "",
       "link": "https://2025-htmelephant-bookswap.dev.io-academy.uk/"
     },
     {
+      "id" : 2,
       "title": "PHP Blog",
       "description": "A PHP application styled with Tailwind CSS to display blog posts retrieved from a MySQL database. Included user authentication and validation to allow interaction with blog posts. Users have functionality to add, blogs, leave comments and like or dislike posts. All information tracked in the Database and shown on front end.",
-      "image": "src/assets/phpBlog.png",
+      "image": "/assets/phpBlog.png",
+      "alt": "",
+      "link": "https://2025-sql-seagulls-blog.dev.io-academy.uk/"
+    },
+    {
+      "id" : 3,
+      "title": "PHP Blog",
+      "description": "A PHP application styled with Tailwind CSS to display blog posts retrieved from a MySQL database. Included user authentication and validation to allow interaction with blog posts. Users have functionality to add, blogs, leave comments and like or dislike posts. All information tracked in the Database and shown on front end.",
+      "image": "/assets/phpBlog.png",
+      "alt": "",
+      "link": "https://2025-sql-seagulls-blog.dev.io-academy.uk/"
+    },
+    {
+      "id" : 4,
+      "title": "PHP Blog",
+      "description": "A PHP application styled with Tailwind CSS to display blog posts retrieved from a MySQL database. Included user authentication and validation to allow interaction with blog posts. Users have functionality to add, blogs, leave comments and like or dislike posts. All information tracked in the Database and shown on front end.",
+      "image": "/assets/phpBlog.png",
       "alt": "",
       "link": "https://2025-sql-seagulls-blog.dev.io-academy.uk/"
     }

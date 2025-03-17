@@ -11,15 +11,15 @@ export default function Projects() {
     }, []);
 
     return (
-        <div className="flex justify-center">
-            <div className="grid grid-cols-2 gap-16 mt-20 max-sm:grid-cols-1">
+        <div className="flex justify-center px-6">
+            <div className="grid md:grid-cols-2 gap-16 mt-20 max-sm:grid-cols-1">
                 {projects.map((project) => (
                     <SingleProjectBox
-                        key={project.title}
+                        key={project.id}
                         title={project.title}
-                        description={project.description}
                         image={project.image}
-                        link={project.link}
+                        alt={project.alt}
+                        id={project.id}
                     />
                 ))}
             </div>
