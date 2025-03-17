@@ -7,8 +7,8 @@ export default function NavigationLinks() {
 
     return(
         <div className={'flex flex-col font-light'}>
-            <p>Feel free to explore my <span className={'underline font-normal'}><a href={'#'}>work</a></span> while you're here.</p>
-            <p>If you'd like to connect <span className={'underline font-normal'} onClick={() => setShowIcons(!showIcons)}>get in touch</span></p>
+            <p>Feel free to explore my <span className={'underline underline-offset-4 font-normal'}><a href={'/projects/'}>work</a></span> while you're here.</p>
+            <p>If you'd like to connect <span className={'underline underline-offset-4 font-normal cursor-pointer'} onClick={() => setShowIcons(!showIcons)}>get in touch</span></p>
             <div className={'mt-6'}>
             {showIcons && (<SocialLinks />)}
             </div>
