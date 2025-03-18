@@ -23,13 +23,13 @@ export default function DisplaySingleProject(){
     }, [id]);
 
     return (
-        <div>
+        <div className={'grid grid-cols-2'}>
             <h1>{project.title}</h1>
             <p>{project.description}</p>
             {project.image && <img src={project.image} alt={project.title} />}
             {project.link && (
                 <p>
-                    <a href={project.link} target="_blank" rel="noopener noreferrer">
+                    <a href={project.link} target="_blank">
                         Project Link
                     </a>
                 </p>
