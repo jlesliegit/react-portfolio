@@ -6,7 +6,7 @@ export default function SingleProjectBox({ id, title, image, description }) {
     return (
         <div
             className={`flex flex-col justify-center items-center cursor-pointer rounded-lg transition-all duration-300 ${
-                isHovered ? "grayscale-0" : "grayscale"
+                isHovered ? "grayscale-0 drop-shadow-md" : "grayscale"
             }`}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
