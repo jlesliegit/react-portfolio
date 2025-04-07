@@ -3,6 +3,7 @@ import {useEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
 import TechnologyGrid from "./TechnologyGrid.jsx";
+import Nav from "../components/Nav.jsx";
 
 export default function DisplaySingleProject(){
     const {id} = useParams();
@@ -26,6 +27,8 @@ export default function DisplaySingleProject(){
     }, [id]);
 
     return (
+        <>
+            <Nav link={'/projects/'} destination={'Projects'} />
         <div className={'grid grid-cols-1 mx-32 mt-20 p-5 gap-6 md:grid-cols-2'}>
             <div>
                 {project.image && <img src={project.image} alt={project.title} className={'h-80 mb-6'} />}
@@ -40,12 +43,13 @@ export default function DisplaySingleProject(){
             <p>{project.description}</p>
                 <div className={'flex items-center gap-4'}>
                     <a href={project.liveLink} target="_blank" className={'hover:text-gray-600'}>Live project</a>
-                    <a href={project.liveProject} target="_blank" className={'hover:text-gray-600'}>Live frontend</a>
+                    {project.liveProject && <a href={project.liveProject} target="_blank" className={'hover:text-gray-600'}>Live frontend</a>}
                     <a href={project.link} target="_blank">
                         <FontAwesomeIcon icon={faGithub} className="text-3xl hover:text-gray-600"/>
                     </a>
                 </div>
             </div>
         </div>
+        </>
     );
 }

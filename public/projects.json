@@ -32,7 +32,7 @@
       "id": "3",
       "title": "Backend Quiz API",
       "description": "A RESTful API built in Laravel which works in tandem with a React frontend. The application allows users to create, edit, and delete quizzes along with their associated questions and answers. User's can also calculate results based on the user’s responses.",
-      "image": "/assets/phpBlog.png",
+      "image": "/assets/quiz-frontend.png",
       "alt": "",
       "link": "https://github.com/iO-Academy/2025-jan-sde-quiz-laravants",
       "liveLink": "https://2025-laravants-quiz-api.dev.io-academy.uk/api/quizzes",
