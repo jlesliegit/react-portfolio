@@ -11,8 +11,8 @@ export default function Projects() {
     }, []);
 
     return (
-        <div className="flex justify-center px-6">
-            <div className="grid md:grid-cols-2 gap-16 mt-20 max-sm:grid-cols-1">
+        <div className="flex justify-center px-6 mb-10">
+            <div className="grid md:grid-cols-1 gap-16 mt-20 max-sm:grid-cols-1">
                 {projects.map((project) => (
                     <SingleProjectBox
                         key={project.id}
