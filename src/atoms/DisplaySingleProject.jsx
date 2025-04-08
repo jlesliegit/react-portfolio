@@ -33,9 +33,7 @@ export default function DisplaySingleProject(){
             <div>
                 {project.image && <img src={project.image} alt={project.title} className={'h-80 mb-6'} />}
                 <div>
-                    <h3 className={'mb-6'}>Technologies used</h3>
-                    <TechnologyGrid />
-
+                    <TechnologyGrid technologies={project.technologies} />
                 </div>
             </div>
             <div className={'flex flex-col col-start-2 gap-4'}>

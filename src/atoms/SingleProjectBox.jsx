@@ -14,7 +14,6 @@ export default function SingleProjectBox({ id, title, image, description }) {
             <a href={`/projects/${id}`}>
                 <img src={image} alt={title} className="w-140 h-100 object-cover mb-2" />
                 <p className={'text-[#7600dc] font-bold'}>{title}</p>
-                <p>{description}</p>
             </a>
         </div>
     );

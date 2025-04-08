@@ -4,7 +4,7 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 
 export default function SocialLinks() {
     return (
-        <div className="socialLinks flex gap-5 items-center">
+        <div className={"socialLinks flex gap-5 items-center"}>
             <a href="https://www.linkedin.com/in/jack-leslie-/" target="_blank">
                 <FontAwesomeIcon icon={faLinkedin} className="text-3xl hover:text-gray-600"/>
             </a>
