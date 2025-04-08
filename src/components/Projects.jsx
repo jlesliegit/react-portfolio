@@ -1,5 +1,6 @@
 import SingleProjectBox from "../atoms/SingleProjectBox.jsx";
 import {useEffect, useState} from "react";
+import Nav from "./Nav.jsx";
 
 export default function Projects() {
     const [projects, setProjects] = useState([]);
@@ -11,7 +12,9 @@ export default function Projects() {
     }, []);
 
     return (
-        <div className="flex justify-center px-6">
+        <>
+            <Nav link={'/'} destination={'Home'} />
+        <div className="flex justify-center px-6 mb-10">
             <div className="grid md:grid-cols-2 gap-16 mt-20 max-sm:grid-cols-1">
                 {projects.map((project) => (
                     <SingleProjectBox
@@ -24,5 +27,6 @@ export default function Projects() {
                 ))}
             </div>
         </div>
+        </>
     );
 }

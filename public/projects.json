@@ -1,38 +1,47 @@
 {
   "projects": [
     {
-      "id" : "1",
+      "id": "1",
       "title": "Book Swap Library",
       "description": "As a team of 6 we collaborated using agile methodologies to work with an already existing API to implement a number of features including displaying books, adding new book entries, adding reviews for books and the ability to claim and return books.",
       "image": "/assets/bookswap.png",
       "alt": "",
-      "link": "https://2025-htmelephant-bookswap.dev.io-academy.uk/",
-      "liveLink" : "https://2025-htmelephant-bookswap.dev.io-academy.uk/"
+      "link": "https://github.com/iO-Academy/2025-jan-htmelephant-bookswap-fe",
+      "liveLink": "https://2025-htmelephant-bookswap.dev.io-academy.uk/",
+      "technologies": {
+        "languages": ["JavaScript", "HTML", "CSS"],
+        "frameworks": ["React"],
+        "tools": ["Git", "Agile"]
+      }
     },
     {
-      "id" : "2",
+      "id": "2",
       "title": "PHP Blog",
       "description": "A PHP application styled with Tailwind CSS to display blog posts retrieved from a MySQL database. Included user authentication and validation to allow interaction with blog posts. Users have functionality to add, blogs, leave comments and like or dislike posts. All information tracked in the Database and shown on front end.",
       "image": "/assets/phpBlog.png",
       "alt": "",
-      "link": "https://2025-sql-seagulls-blog.dev.io-academy.uk/",
-      "liveLink" : "https://2025-sql-seagulls-blog.dev.io-academy.uk/"
+      "link": "https://github.com/iO-Academy/2025-jan-sde-blog-sql-seagulls",
+      "liveLink": "https://2025-sql-seagulls-blog.dev.io-academy.uk/",
+      "technologies": {
+        "languages": ["PHP", "JavaScript"],
+        "frameworks": ["Laravel"],
+        "tools": ["MySQL", "Tailwind CSS"]
+      }
     },
     {
-      "id" : "3",
-      "title": "PHP Blog",
-      "description": "A PHP application styled with Tailwind CSS to display blog posts retrieved from a MySQL database. Included user authentication and validation to allow interaction with blog posts. Users have functionality to add, blogs, leave comments and like or dislike posts. All information tracked in the Database and shown on front end.",
-      "image": "/assets/phpBlog.png",
+      "id": "3",
+      "title": "Backend Quiz API",
+      "description": "A RESTful API built in Laravel which works in tandem with a React frontend. The application allows users to create, edit, and delete quizzes along with their associated questions and answers. Users can also calculate results based on the user’s responses.",
+      "image": "/assets/quiz-frontend.png",
       "alt": "",
-      "link": "https://2025-sql-seagulls-blog.dev.io-academy.uk/"
-    },
-    {
-      "id" : "4",
-      "title": "PHP Blog",
-      "description": "A PHP application styled with Tailwind CSS to display blog posts retrieved from a MySQL database. Included user authentication and validation to allow interaction with blog posts. Users have functionality to add, blogs, leave comments and like or dislike posts. All information tracked in the Database and shown on front end.",
-      "image": "/assets/phpBlog.png",
-      "alt": "",
-      "link": "https://2025-sql-seagulls-blog.dev.io-academy.uk/"
+      "link": "https://github.com/iO-Academy/2025-jan-sde-quiz-laravants",
+      "liveLink": "https://2025-laravants-quiz-api.dev.io-academy.uk/api/quizzes",
+      "liveProject": "https://2025-laravants-quiz-fe.dev.io-academy.uk/",
+      "technologies": {
+        "languages": ["PHP"],
+        "frameworks": ["Laravel"],
+        "tools": ["MySQL", "Tailwind CSS", "Eloquent ORM", "Postman", "HTTP Testing"]
+      }
     }
   ]
 }
