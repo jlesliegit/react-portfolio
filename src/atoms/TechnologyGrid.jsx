@@ -9,6 +9,9 @@ export default function TechnologyGrid() {
     const [languages, setLanguages] = useState([]);
     const [frameworks, setFrameworks] = useState([]);
     const [tools, setTools] = useState([]);
+    const [showLanguages, setShowLanguages] = useState(false);
+    const [showFrameworks, setShowFrameworks] = useState(false);
+    const [showTools, setShowTools] = useState(false);
     const { id } = useParams();
 
     useEffect(() => {
@@ -25,23 +28,38 @@ export default function TechnologyGrid() {
     }, [id]);
 
     return(
-        <div className={'grid grid-cols-3 max-md:flex max-md:flex-col'}>
-            <h3>Languages</h3>
-            {/*State to control what is shown based on which title is clicked similar to social links*/}
-            <h3>Frameworks</h3>
-            <h3>Tools</h3>
+        <div>
+        <div className={'grid grid-cols-3 max-md:flex max-md:flex-col mb-4'}>
+            <h3 onClick={() => setShowLanguages(!showLanguages)}>Languages</h3>
+            <h3 onClick={() => setShowFrameworks(!showFrameworks)}>Frameworks</h3>
+            <h3 onClick={() => setShowTools(!showTools)}>Tools</h3>
+        </div>
+            {showLanguages &&
+                <div className={'flex flex-col gap-2'}>
+                {languages.map((language) => (
+                    <Languages key={language} name={language} />
+                ))}
+                </div>
+            }
 
-            {languages.map((language) => (
-                <Languages key={language} name={language} />
-            ))}
+            {showFrameworks &&
+                <div className={'flex flex-col gap-2'}>
+                    {frameworks.map((framework) => (
+                        <Frameworks key={framework} name={framework} />
+                    ))}
+                </div>
+            }
 
-            {frameworks.map((framework) => (
-                <Frameworks key={framework} name={framework} />
-            ))}
+            {showTools &&
+                <div className={'flex flex-col gap-2'}>
+                    {tools.map((tool) => (
+                        <Tools key={tool} name={tool} />
+                    ))}
+                </div>
+            }
 
-            {tools.map((tool) => (
-                <Tools key={tool} name={tool} />
-            ))}
+
+
         </div>
     )
 }
