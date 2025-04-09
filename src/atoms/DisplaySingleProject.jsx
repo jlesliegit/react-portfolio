@@ -7,7 +7,7 @@ import Nav from "../components/Nav.jsx";
 
 export default function DisplaySingleProject(){
     const {id} = useParams();
-    const [project, setProject] = useState('');
+    const [project, setProject] = useState([]);
 
     function getProjectData() {
         fetch("/projects.json")
@@ -29,20 +29,23 @@ export default function DisplaySingleProject(){
     return (
         <>
             <Nav link="/projects/" destination="Projects" />
-            <div className="grid md:grid-cols-2 gap-6 mt-10 px-5 md:px-12 lg:px-48 xl:px-80">
+            <div className="grid grid-cols-1 gap-6 mt-10 px-5 md:px-12 lg:px-48 xl:px-80">
                 <div>
                     {project.image && (
                         <img
                             src={project.image}
                             alt={project.title}
-                            className="w-fit h-fit object-cover mb-6"
+                            className="w-[90%] h-[90%] object-contain mb-2"
                         />
                     )}
                 </div>
-                <div className="flex flex-col gap-4">
+                <div className="flex flex-col gap-6">
                     <h1 className="text-2xl font-semibold">{project.title}</h1>
-                    <p>{project.description}</p>
-                    <div className="flex flex-wrap items-center gap-4">
+                    <div className={`grid md:grid-cols-2`}>
+                        <p>{project.description}</p>
+                    <div className="flex flex-col gap-4">
+                        <TechnologyGrid technologies={project.technologies} />
+                        <div className={'flex justify-center gap-4'}>
                         <a href={project.liveLink} target="_blank" className="hover:text-gray-600">
                             Live project
                         </a>
@@ -55,7 +58,8 @@ export default function DisplaySingleProject(){
                             <FontAwesomeIcon icon={faGithub} className="text-3xl hover:text-gray-600" />
                         </a>
                     </div>
-                    <TechnologyGrid technologies={project.technologies} />
+                    </div>
+                    </div>
                 </div>
             </div>
         </>
