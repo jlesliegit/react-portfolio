@@ -12,7 +12,7 @@ export default function SingleProjectBox({ id, title, image, description }) {
             onMouseLeave={() => setIsHovered(false)}
         >
             <a href={`/projects/${id}`}>
-                <img src={image} alt={title} className="w-140 h-100 object-cover mb-2" />
+                <img src={image} alt={title} className="w-fit h-64 mb-6" />
                 <p className={'text-[#7600dc] font-bold'}>{title}</p>
             </a>
         </div>
