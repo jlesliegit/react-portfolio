@@ -15,7 +15,7 @@ export default function Projects() {
         <>
             <Nav link={'/'} destination={'Home'} />
         <div className="flex justify-center px-6 mb-10">
-            <div className="grid md:grid-cols-2 gap-16 mt-20 sm:grid-cols-1">
+            <div className="grid gap-16 mt-20 md:grid-cols-2 sm:grid-cols-1">
                 {projects.map((project) => (
                     <SingleProjectBox
                         key={project.id}

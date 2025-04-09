@@ -51,21 +51,21 @@ export default function TechnologyGrid() {
         <div className={'grid grid-cols-3 max-md:flex max-md:flex-col mb-4 border-1 border-gray-200 rounded-lg'}>
             <div className={`flex justify-center py-2 rounded-lg
             ${
-                activeTab === "languages" ? "bg-[#3780E9] text-white" : "bg-white"
+                activeTab === "languages" ? "bg-[#3780E9] text-white max-sm:drop-shadow-lg" : "bg-white"
             }`}>
                 <h3 onClick={handleLanguageChange}>Languages</h3>
             </div>
 
             <div className={`flex justify-center py-2 rounded-lg
                 ${
-                    activeTab === "frameworks" ? "bg-[#3780E9] text-white" : "bg-white"
+                    activeTab === "frameworks" ? "bg-[#3780E9] text-white max-sm:drop-shadow-lg" : "bg-white"
                 }`}>
                 <h3 onClick={handleFrameworkChange}>Frameworks</h3>
             </div>
 
             <div className={`flex justify-center py-2 rounded-lg
                 ${
-                    activeTab === "tools" ? "bg-[#3780E9] text-white" : "bg-white"
+                    activeTab === "tools" ? "bg-[#3780E9] text-white max-sm:drop-shadow-lg" : "bg-white"
                 }`}>
             <h3 onClick={handleToolsChange}>Tools</h3>
             </div>
