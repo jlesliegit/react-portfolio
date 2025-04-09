@@ -39,30 +39,41 @@ export default function DisplaySingleProject(){
                         />
                     )}
                 </div>
-                <div className="flex flex-col gap-6">
+                <div className="flex flex-col gap-2">
                     <h1 className="text-2xl font-semibold">{project.title}</h1>
-                    <div className={`grid md:grid-cols-2`}>
+                    <div className={`grid md:grid-cols-2 gap-4`}>
                         <p>{project.description}</p>
-                    <div className="flex flex-col gap-4">
-                        <TechnologyGrid technologies={project.technologies} />
-                        <div className={'flex justify-center gap-4'}>
-                        <a href={project.liveLink} target="_blank" className="hover:text-gray-600">
-                            Live project
-                        </a>
-                        {project.liveProject && (
-                            <a href={project.liveProject} target="_blank" className="hover:text-gray-600">
-                                Live frontend
-                            </a>
-                        )}
-                        <a href={project.link} target="_blank">
-                            <FontAwesomeIcon icon={faGithub} className="text-3xl hover:text-gray-600" />
-                        </a>
-                    </div>
-                    </div>
+                        <div className="flex flex-col gap-4">
+                            <TechnologyGrid technologies={project.technologies} />
+                            <div className={'flex justify-center gap-4'}>
+                                <a
+                                    href={project.liveLink}
+                                    target="_blank"
+                                    className="hover:text-gray-600"
+                                >
+                                    Live project
+                                </a>
+                                {project.liveProject && (
+                                    <a
+                                        href={project.liveProject}
+                                        target="_blank"
+                                        className="hover:text-gray-600"
+                                    >
+                                        Live frontend
+                                    </a>
+                                )}
+                                <a href={project.link} target="_blank">
+                                    <FontAwesomeIcon
+                                        icon={faGithub}
+                                        className="text-3xl hover:text-gray-600"
+                                    />
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </>
-
     );
+
 }
