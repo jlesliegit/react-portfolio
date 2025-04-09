@@ -9,7 +9,7 @@ export default function TechnologyGrid() {
     const [showLanguages, setShowLanguages] = useState(false);
     const [showFrameworks, setShowFrameworks] = useState(false);
     const [showTools, setShowTools] = useState(false);
-    const [isActive, setIsActive] = useState(false);
+    const [activeTab, setActiveTab] = useState(null);
     const { id } = useParams();
 
     useEffect(() => {
@@ -26,19 +26,21 @@ export default function TechnologyGrid() {
     }, [id]);
 
     function handleLanguageChange(){
+        setActiveTab(activeTab === "languages" ? null : "languages");
         setShowLanguages(!showLanguages);
         setShowFrameworks(false);
         setShowTools(false);
-        setIsActive(!isActive);
     }
 
     function handleFrameworkChange(){
+        setActiveTab(activeTab === "frameworks" ? null : "frameworks");
         setShowFrameworks(!showFrameworks);
         setShowTools(false);
         setShowLanguages(false);
     }
 
     function handleToolsChange(){
+        setActiveTab(activeTab === "tools" ? null : "tools");
         setShowTools(!showTools);
         setShowFrameworks(false);
         setShowLanguages(false);
@@ -46,21 +48,30 @@ export default function TechnologyGrid() {
 
     return(
         <div>
-        <div className={'grid grid-cols-3 gap-6 max-md:flex max-md:flex-col mb-4'}>
-            <div className={'flex justify-center py-2 rounded-lg bg-blue-300'}>
+        <div className={'grid grid-cols-3 max-md:flex max-md:flex-col mb-4 border-1 border-gray-200 rounded-lg'}>
+            <div className={`flex justify-center py-2 rounded-lg
+            ${
+                activeTab === "languages" ? "bg-[#3780E9] text-white max-sm:drop-shadow-lg" : "bg-white"
+            }`}>
                 <h3 onClick={handleLanguageChange}>Languages</h3>
             </div>
 
-            <div className={'flex justify-center py-2 bg-blue-300 rounded-lg'}>
+            <div className={`flex justify-center py-2 rounded-lg
+                ${
+                    activeTab === "frameworks" ? "bg-[#3780E9] text-white max-sm:drop-shadow-lg" : "bg-white"
+                }`}>
                 <h3 onClick={handleFrameworkChange}>Frameworks</h3>
             </div>
 
-            <div className={'flex justify-center py-2 bg-blue-300 rounded-lg'}>
+            <div className={`flex justify-center py-2 rounded-lg
+                ${
+                    activeTab === "tools" ? "bg-[#3780E9] text-white max-sm:drop-shadow-lg" : "bg-white"
+                }`}>
             <h3 onClick={handleToolsChange}>Tools</h3>
             </div>
         </div>
             {showLanguages &&
-                <div className={'flex flex-col justify-center gap-4'}>
+                <div className={'grid grid-cols-3 gap-4'}>
                 {languages.map((language) => (
                     <Technologies key={language} name={language} />
                 ))}
@@ -68,7 +79,7 @@ export default function TechnologyGrid() {
             }
 
             {showFrameworks &&
-                <div className={'flex flex-col gap-2'}>
+                <div className={'grid grid-cols-3 gap-4'}>
                     {frameworks.map((framework) => (
                         <Technologies key={framework} name={framework} />
                     ))}
@@ -76,8 +87,8 @@ export default function TechnologyGrid() {
             }
 
             {showTools &&
-                <div className={'flex flex-col gap-2'}>
-                    {tools.map((tool) => (
+                <div className={'grid grid-cols-3 gap-4'}>
+                {tools.map((tool) => (
                         <Technologies key={tool} name={tool} />
                     ))}
                 </div>
