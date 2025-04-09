@@ -1,7 +1,6 @@
-import SingleTechnologyItem from "./Languages.jsx";
 import {useEffect, useState} from "react";
 import Languages from "./Languages.jsx";
-import {useParams} from "react-router-dom";
+import {useLocation, useParams} from "react-router-dom";
 import Frameworks from "./Frameworks.jsx";
 import Tools from "./Tools.jsx";
 
@@ -12,6 +11,7 @@ export default function TechnologyGrid() {
     const [showLanguages, setShowLanguages] = useState(false);
     const [showFrameworks, setShowFrameworks] = useState(false);
     const [showTools, setShowTools] = useState(false);
+    const [isActive, setIsActive] = useState(false);
     const { id } = useParams();
 
     useEffect(() => {
@@ -27,15 +27,42 @@ export default function TechnologyGrid() {
             });
     }, [id]);
 
+    function handleLanguageChange(){
+        setShowLanguages(!showLanguages);
+        setShowFrameworks(false);
+        setShowTools(false);
+        setIsActive(!isActive);
+    }
+
+    function handleFrameworkChange(){
+        setShowFrameworks(!showFrameworks);
+        setShowTools(false);
+        setShowLanguages(false);
+    }
+
+    function handleToolsChange(){
+        setShowTools(!showTools);
+        setShowFrameworks(false);
+        setShowLanguages(false);
+    }
+
     return(
         <div>
-        <div className={'grid grid-cols-3 max-md:flex max-md:flex-col mb-4'}>
-            <h3 onClick={() => setShowLanguages(!showLanguages)}>Languages</h3>
-            <h3 onClick={() => setShowFrameworks(!showFrameworks)}>Frameworks</h3>
-            <h3 onClick={() => setShowTools(!showTools)}>Tools</h3>
+        <div className={'grid grid-cols-3 gap-6 max-md:flex max-md:flex-col mb-4'}>
+            <div className={'flex justify-center py-2 rounded-lg bg-blue-300'}>
+                <h3 onClick={handleLanguageChange}>Languages</h3>
+            </div>
+
+            <div className={'flex justify-center py-2 bg-blue-300 rounded-lg'}>
+                <h3 onClick={handleFrameworkChange}>Frameworks</h3>
+            </div>
+
+            <div className={'flex justify-center py-2 bg-blue-300 rounded-lg'}>
+            <h3 onClick={handleToolsChange}>Tools</h3>
+            </div>
         </div>
             {showLanguages &&
-                <div className={'flex flex-col gap-2'}>
+                <div className={'flex flex-col justify-center gap-4'}>
                 {languages.map((language) => (
                     <Languages key={language} name={language} />
                 ))}
@@ -57,9 +84,6 @@ export default function TechnologyGrid() {
                     ))}
                 </div>
             }
-
-
-
         </div>
     )
 }
