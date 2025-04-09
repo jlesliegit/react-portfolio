@@ -1,8 +1,6 @@
 import {useEffect, useState} from "react";
-import Languages from "./Languages.jsx";
-import {useLocation, useParams} from "react-router-dom";
-import Frameworks from "./Frameworks.jsx";
-import Tools from "./Tools.jsx";
+import Technologies from "./Technologies.jsx";
+import { useParams} from "react-router-dom";
 
 export default function TechnologyGrid() {
     const [languages, setLanguages] = useState([]);
@@ -64,7 +62,7 @@ export default function TechnologyGrid() {
             {showLanguages &&
                 <div className={'flex flex-col justify-center gap-4'}>
                 {languages.map((language) => (
-                    <Languages key={language} name={language} />
+                    <Technologies key={language} name={language} />
                 ))}
                 </div>
             }
@@ -72,7 +70,7 @@ export default function TechnologyGrid() {
             {showFrameworks &&
                 <div className={'flex flex-col gap-2'}>
                     {frameworks.map((framework) => (
-                        <Frameworks key={framework} name={framework} />
+                        <Technologies key={framework} name={framework} />
                     ))}
                 </div>
             }
@@ -80,7 +78,7 @@ export default function TechnologyGrid() {
             {showTools &&
                 <div className={'flex flex-col gap-2'}>
                     {tools.map((tool) => (
-                        <Tools key={tool} name={tool} />
+                        <Technologies key={tool} name={tool} />
                     ))}
                 </div>
             }
