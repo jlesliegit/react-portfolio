@@ -35,7 +35,7 @@ export default function DisplaySingleProject(){
                         <img
                             src={project.image}
                             alt={project.title}
-                            className="w-[90%] h-[90%] object-contain mb-2"
+                            className="w-[85%] h-[85%] object-contain mb-2"
                         />
                     )}
                 </div>
@@ -43,9 +43,10 @@ export default function DisplaySingleProject(){
                     <h1 className="text-2xl font-semibold">{project.title}</h1>
                     <div className={`grid md:grid-cols-2 gap-4`}>
                         <p>{project.description}</p>
-                        <div className="flex flex-col gap-4">
+                        <div className="grid gap-4 md:grid-cols-1 max-sm:grid-cols-2 max-sm:gap-20">
+                            {/*Sort out gap on mobile*/}
                             <TechnologyGrid technologies={project.technologies} />
-                            <div className={'flex justify-center gap-4'}>
+                            <div className={'flex justify-center gap-4 max-sm:flex-col'}>
                                 <a
                                     href={project.liveLink}
                                     target="_blank"
