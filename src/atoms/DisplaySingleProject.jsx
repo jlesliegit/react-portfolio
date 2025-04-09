@@ -29,7 +29,7 @@ export default function DisplaySingleProject(){
     return (
         <>
             <Nav link="/projects/" destination="Projects" />
-            <div className="grid grid-cols-1 gap-6 mt-10 md:grid-cols-2 px-5 md:px-12 lg:px-48">
+            <div className="grid md:grid-cols-2 gap-6 mt-10 px-5 md:px-12 lg:px-48">
                 <div>
                     {project.image && (
                         <img
