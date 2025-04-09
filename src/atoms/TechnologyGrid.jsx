@@ -71,7 +71,7 @@ export default function TechnologyGrid() {
             </div>
         </div>
             {showLanguages &&
-                <div className={'flex flex-col justify-center gap-4'}>
+                <div className={'grid grid-cols-3 gap-4'}>
                 {languages.map((language) => (
                     <Technologies key={language} name={language} />
                 ))}
@@ -79,7 +79,7 @@ export default function TechnologyGrid() {
             }
 
             {showFrameworks &&
-                <div className={'grid grid-cols-2'}>
+                <div className={'grid grid-cols-3 gap-4'}>
                     {frameworks.map((framework) => (
                         <Technologies key={framework} name={framework} />
                     ))}
