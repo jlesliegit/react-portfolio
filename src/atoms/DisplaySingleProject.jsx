@@ -35,7 +35,7 @@ export default function DisplaySingleProject(){
                         <img
                             src={project.image}
                             alt={project.title}
-                            className="w-fit h-64 mb-6"
+                            className="w-fit h-fit object-cover mb-6"
                         />
                     )}
                 </div>
