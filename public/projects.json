@@ -1,6 +1,21 @@
 {
   "projects": [
     {
+      "id": "3",
+      "title": "Backend Quiz API",
+      "description": "A RESTful API built in Laravel which works in tandem with a React frontend. The application allows users to create, edit, and delete quizzes along with their associated questions and answers. Users can also calculate results based on the user’s responses.",
+      "image": "/assets/quiz-frontend.png",
+      "alt": "",
+      "link": "https://github.com/iO-Academy/2025-jan-sde-quiz-laravants",
+      "liveLink": "https://2025-laravants-quiz-api.dev.io-academy.uk/api/quizzes",
+      "liveProject": "https://2025-laravants-quiz-fe.dev.io-academy.uk/",
+      "technologies": {
+        "languages": ["PHP"],
+        "frameworks": ["Laravel"],
+        "tools": ["MySQL", "Tailwind CSS", "Eloquent ORM", "Postman", "HTTP Testing"]
+      }
+    },
+    {
       "id": "1",
       "title": "Book Swap Library",
       "description": "As a team of 6 we collaborated using agile methodologies to work with an already existing API to implement a number of features including displaying books, adding new book entries, adding reviews for books and the ability to claim and return books.",
@@ -26,21 +41,6 @@
         "languages": ["PHP", "JavaScript"],
         "frameworks": ["Laravel"],
         "tools": ["MySQL", "Tailwind CSS"]
-      }
-    },
-    {
-      "id": "3",
-      "title": "Backend Quiz API",
-      "description": "A RESTful API built in Laravel which works in tandem with a React frontend. The application allows users to create, edit, and delete quizzes along with their associated questions and answers. Users can also calculate results based on the user’s responses.",
-      "image": "/assets/quiz-frontend.png",
-      "alt": "",
-      "link": "https://github.com/iO-Academy/2025-jan-sde-quiz-laravants",
-      "liveLink": "https://2025-laravants-quiz-api.dev.io-academy.uk/api/quizzes",
-      "liveProject": "https://2025-laravants-quiz-fe.dev.io-academy.uk/",
-      "technologies": {
-        "languages": ["PHP"],
-        "frameworks": ["Laravel"],
-        "tools": ["MySQL", "Tailwind CSS", "Eloquent ORM", "Postman", "HTTP Testing"]
       }
     }
   ]
