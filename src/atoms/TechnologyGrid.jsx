@@ -79,7 +79,7 @@ export default function TechnologyGrid() {
             }
 
             {showFrameworks &&
-                <div className={'flex flex-col gap-2'}>
+                <div className={'grid grid-cols-2'}>
                     {frameworks.map((framework) => (
                         <Technologies key={framework} name={framework} />
                     ))}
@@ -87,8 +87,8 @@ export default function TechnologyGrid() {
             }
 
             {showTools &&
-                <div className={'flex flex-col gap-2'}>
-                    {tools.map((tool) => (
+                <div className={'grid grid-cols-3 gap-4'}>
+                {tools.map((tool) => (
                         <Technologies key={tool} name={tool} />
                     ))}
                 </div>
