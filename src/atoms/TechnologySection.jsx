@@ -3,6 +3,7 @@ import {useParams} from "react-router-dom";
 
 export default function TechnologySection({ category }) {
     const [technologies, setTechnologies] = useState([]);
+    const smallSection = technologies.length <= 2;
     const { id } = useParams();
 
     useEffect(() => {
@@ -17,10 +18,10 @@ export default function TechnologySection({ category }) {
     }, [id]);
 
     return (
-        <div className={'grid grid-cols-3 gap-4'}>
-            {technologies.map((tech) => (
-                <div key={tech} className={'inline-block whitespace-nowrap w-fit px-3 py-1 bg-gray-100 text-sm text-gray-800 rounded-lg shadow-sm'}>
-                    {tech}
+        <div className={`flex ${smallSection ? 'items-center gap-2' : 'flex-wrap justify-start gap-4'}`}>
+            {technologies.map((technology) => (
+                <div key={technology} className={'inline-block whitespace-nowrap w-fit px-3 py-1 bg-gray-100 text-sm text-gray-800 rounded-lg shadow-sm'}>
+                    {technology}
                 </div>
             ))}
         </div>
