@@ -14,14 +14,13 @@ export default function Projects() {
     return (
         <>
             <Nav link={'/'} destination={'Home'} />
-        <div className="flex justify-center px-6 mb-10">
-            <div className="grid gap-16 mt-20 md:grid-cols-2 sm:grid-cols-1">
+        <div className="grid grid-cols-1 sm:grid-cols-2 sm:px-10 sm:items-start">
+            <div className="flex flex-col text-left gap-4 px-4 mb-10 sm:max-w-screen-md sm:w-full sm:ml-20 sm:pl-10 pt-52 max-sm:px-8">
                 {projects.map((project) => (
                     <SingleProjectBox
                         key={project.id}
                         title={project.title}
-                        image={project.image}
-                        alt={project.alt}
+                        snippet={project.snippet}
                         id={project.id}
                     />
                 ))}

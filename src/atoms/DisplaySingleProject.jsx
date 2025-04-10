@@ -9,20 +9,21 @@ export default function DisplaySingleProject(){
     const {id} = useParams();
     const [project, setProject] = useState([]);
 
-    function getProjectData() {
-        fetch("/projects.json")
-            .then((response) => response.json())
-            .then((data) => {
-                const foundProject = data.projects.find((project) => project.id === id);
-                if (foundProject) {
-                    setProject(foundProject);
-                } else {
-                    console.log("Project not found");
-                }
-            });
-    }
 
     useEffect(() => {
+        function getProjectData() {
+            fetch("/projects.json")
+                .then((response) => response.json())
+                .then((data) => {
+                    const foundProject = data.projects.find((project) => project.id === id);
+                    if (foundProject) {
+                        setProject(foundProject);
+                    } else {
+                        console.log("Project not found");
+                    }
+                });
+        }
+
         getProjectData();
     }, [id]);
 
