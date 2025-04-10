@@ -15,7 +15,7 @@ export default function TechnologySection({ category }) {
                     setTechnologies(project.technologies[category]);
                 }
             });
-    }, [id]);
+    }, [id, category]);
 
     return (
         <div className={`flex ${smallSection ? 'items-center gap-2' : 'flex-wrap justify-start gap-4'}`}>

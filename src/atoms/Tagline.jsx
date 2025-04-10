@@ -1,5 +1,5 @@
 import {TypeAnimation} from "react-type-animation";
-export default function() {
+export default function Tagline() {
     return(
         <TypeAnimation
             className={'font-light'}
