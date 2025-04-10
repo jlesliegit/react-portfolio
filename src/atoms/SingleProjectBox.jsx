@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function SingleProjectBox({ id, title, image}) {
+export default function SingleProjectBox({ id, title, image }) {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
