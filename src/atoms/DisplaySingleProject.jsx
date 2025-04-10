@@ -43,10 +43,8 @@ export default function DisplaySingleProject(){
                     <h1 className="text-2xl font-semibold">{project.title}</h1>
                     <div className={`grid md:grid-cols-2 gap-4`}>
                         <p>{project.description}</p>
-                        <div className="grid gap-4 md:grid-cols-1 max-sm:grid-cols-2 max-sm:gap-20">
-                            {/*Sort out gap on mobile*/}
-                            <TechnologyGrid technologies={project.technologies} />
-                            <div className={'flex justify-center gap-4 max-sm:flex-col'}>
+                        <div className="grid gap-8 md:grid-cols-1">
+                            <div className={'flex justify-center items-center gap-4'}>
                                 <a
                                     href={project.liveLink}
                                     target="_blank"
@@ -70,11 +68,12 @@ export default function DisplaySingleProject(){
                                     />
                                 </a>
                             </div>
-                        </div>
+                        <TechnologyGrid technologies={project.technologies} />
                     </div>
                 </div>
             </div>
-        </>
-    );
+        </div>
+    </>
+);
 
 }
