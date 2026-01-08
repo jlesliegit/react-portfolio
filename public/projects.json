@@ -50,10 +50,11 @@
   "current_project": [
     {
       "id": 1,
-      "project": "Sports scoring app",
-      "problem": "I regularly forget tennis scores when playing casual matches",
-      "solution": "A small, mobile-friendly scoring app that I can quickly tap between points",
-      "extra_insight": "Focusing on scalability and real-time syncing to explore how I could later use this for other sports or multiplayer tracking"
+      "project": "roamww Full-Stack Label site",
+      "problem": "Up and coming music label with no real online presence",
+      "solution": "Building a full-stack web application using Laravel for the backend and React for the frontend to showcase artists, releases, and events. Uses a RESTful API, user authentication, and dynamic content management to provide a professional and interactive online platform.",
+      "snippet": "Full-stack Laravel & React app showcasing artists, mixed-media files, and events with RESTful API, authentication, and dynamic content management.",
+      "extra_insight": "Project focuses on practical full-stack architecture decisions, including API design, relational database structure, and responsive frontend development. Highlights hands-on experience in integrating modern web technologies and iterative development."
     }
   ]
 }
